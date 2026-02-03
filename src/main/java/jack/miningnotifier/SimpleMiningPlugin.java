@@ -51,12 +51,16 @@ public class SimpleMiningPlugin extends Plugin
 
 	private boolean shouldNotify(MenuOptionClicked ev)
 	{
-		return switch (ev.getMenuOption())
+		String option = ev.getMenuOption();
+		switch (option)
 		{
-			case "Mine" -> ev.getId() != ObjectID.FOSSIL_VOLCANO_CHAMBER_BLOCKED;
-			case "Chip" -> true;
-			default -> false;
-		};
+			case "Mine":
+				return ev.getId() != ObjectID.FOSSIL_VOLCANO_CHAMBER_BLOCKED;
+			case "Chip":
+				return true;
+			default:
+				return false;
+		}
 	}
 
 	@Subscribe
