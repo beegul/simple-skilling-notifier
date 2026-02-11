@@ -5,11 +5,11 @@ import net.runelite.client.config.ConfigGroup;
 import net.runelite.client.config.ConfigItem;
 import net.runelite.client.config.Notification;
 
-@ConfigGroup("simpleskilling")
+@ConfigGroup("simplemining")
 public interface SimpleSkillingConfig extends Config
 {
 	@ConfigItem(
-			keyName = "miningNotify",
+			keyName = "notifications",
 			name = "Notify Mining",
 			description = "Configures notifications for Mining",
 			position = 1
